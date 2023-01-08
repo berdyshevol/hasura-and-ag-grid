@@ -1,0 +1,114 @@
+{
+  "name": "ag-grid-with-crud",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ag-grid-community/client-side-row-model": "^28.2.1",
+    "@ag-grid-community/core": "^28.2.1",
+    "@ag-grid-community/csv-export": "^28.2.1",
+    "@ag-grid-community/react": "^28.2.1",
+    "@ag-grid-community/styles": "^28.2.1",
+    "@ag-grid-enterprise/column-tool-panel": "^28.2.1",
+    "@ag-grid-enterprise/core": "^28.2.1",
+    "@ag-grid-enterprise/excel-export": "^28.2.1",
+    "@ag-grid-enterprise/filter-tool-panel": "^28.2.1",
+    "@ag-grid-enterprise/menu": "^28.2.1",
+    "@ag-grid-enterprise/row-grouping": "^28.2.1",
+    "@ag-grid-enterprise/set-filter": "^28.2.1",
+    "@ag-grid-enterprise/sparklines": "^28.2.1",
+    "@apollo/client": "^3.7.3",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "bootstrap": "^5.2.3",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint-js": "eslint --ext .ts,.tsx,.js,.jsx ./src/ --fix",
+    "lint-css": "stylelint src/**/*.css src/**/*.scss --fix",
+    "lint": "yarn lint-js && yarn lint-css",
+    "stylelint-check": "stylelint-config-prettier-check"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "eslint": "^8.31.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-chai-friendly": "^0.6.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "husky": "4",
+    "jest": "26.6.0",
+    "lint-staged": "^11.1.2",
+    "prettier": "^2.8.1",
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-prettier": "^2.0.0",
+    "typescript": "^4.9.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ],
+    "*.scss": [
+      "yarn stylelint-check",
+      "yarn lint-css"
+    ]
+  }
+}
