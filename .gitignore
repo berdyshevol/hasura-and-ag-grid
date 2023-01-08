@@ -1,9 +1,9 @@
 .gitignore
 .env
 
+/client/.env
+
 /client/node_modules
-/client/.pnp
-/client/.pnp.js
 
 # testing
 /client/coverage
@@ -11,17 +11,17 @@
 # production
 /client/build
 
-# misc
-/client/src/.DS_Store
-/client/src/.env
-/client/src/.env.local
-/client/src/.env.development.local
-/client/src/.env.development
-/client/src/.env.test.local
-/client/src/.env.production.local
+/client/.DS_Store
+/client/.env
+/client/.env.local
+/client/.env.development.local
+/client/.env.development
+/client/.env.test.local
+/client/.env.production.local
 
 /client/npm-debug.log*
 /client/yarn-debug.log*
 /client/yarn-error.log*
 
 /client/.idea
+
