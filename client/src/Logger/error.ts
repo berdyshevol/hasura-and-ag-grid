@@ -1,5 +1,5 @@
 import { Logger } from './logger';
-import { _DEV_ } from '../Utils';
+import { _DEV_ } from '../utils';
 
 const getErrorMessage = (error: unknown) => {
   if (_DEV_) {

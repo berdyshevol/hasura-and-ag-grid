@@ -1,18 +1,16 @@
-import { useQueryGraphql, gql } from '../../ApolloClient';
+import { useQueryArray, gql } from '../../ApiServices';
 
 type TData = {
-  payload: {
-    id: number;
-    manufacture: string;
-    model: string;
-    assert_number: number;
-    serial_number: string;
-    ip_address: string;
-    erp_ip: string;
-    level: number;
-    coverage: number;
-    yield: string;
-  }[];
+  id: number;
+  manufacture: string;
+  model: string;
+  assert_number: number;
+  serial_number: string;
+  ip_address: string;
+  erp_ip: string;
+  level: number;
+  coverage: number;
+  yield: string;
 };
 
 type TVariable = {};
@@ -35,7 +33,7 @@ const ALL = gql`
 `;
 
 export const useQueryAll = () => {
-  const res = useQueryGraphql<TData, TVariable>(ALL, {});
-  console.log(11111, res);
+  const res = useQueryArray<TData, TVariable>(ALL, {});
+
   return { res, payload: res.data?.payload };
 };
