@@ -56,6 +56,7 @@ export const columnsConfig = AgGrid.colDefs<TData>([
   {
     field: 'level',
     headerName: 'Level',
+    type: [ColumnTypeEnum.number],
   },
   {
     field: 'coverage',

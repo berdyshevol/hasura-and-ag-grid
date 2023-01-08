@@ -1,21 +1,15 @@
-import { useState } from 'react';
 import { GridOptions } from '@ag-grid-community/core';
 import { AgGrid } from '../../AgGridServices';
-import { data } from './data';
 import { TData } from './types';
 import { columnsConfig, defaultColDef } from './columnsConfig';
 import { GridWToolbar } from '../GridWToolbar';
 import { AgGridToolbarParams } from '../AgGridToolbar';
 import { Api } from '../../Api/Enteties';
+import { preparePayload } from './utils';
 
 function GridWrapper() {
   const { payload } = Api.test_table.useQueryAll();
-  console.log(payload);
-
-  const [
-    rowData,
-    // setRowData
-  ] = useState(data);
+  const rowData = preparePayload(payload, 'coverage');
   const columnDefs = columnsConfig;
 
   const gridOptions: GridOptions<TData> = {
