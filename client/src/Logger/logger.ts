@@ -1,5 +1,6 @@
 export const Logger = {
   notify: (arg: unknown) => {
-    console.log(arg);
+    // eslint-disable-next-line
+    console.warn(arg);
   },
 };

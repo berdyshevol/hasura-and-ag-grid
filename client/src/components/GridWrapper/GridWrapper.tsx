@@ -4,7 +4,7 @@ import { TData } from './types';
 import { columnsConfig, defaultColDef } from './columnsConfig';
 import { GridWToolbar } from '../GridWToolbar';
 import { AgGridToolbarParams } from '../AgGridToolbar';
-import { Api } from '../../Api/Enteties';
+import { Api } from '../../Api/Entities';
 import { preparePayload } from './utils';
 
 function GridWrapper() {
