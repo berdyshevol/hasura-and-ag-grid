@@ -1,6 +1,6 @@
 import { useQueryArray, gql } from '../../ApiServices';
 
-type TData = {
+export type TData = {
   id: number;
   manufacture: string;
   model: string;
